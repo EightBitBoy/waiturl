@@ -3,6 +3,12 @@ use std::thread;
 use std::process;
 use clap::Parser;
 
+//TODO: Make sure localhost and 127.0.0.1 work!
+
+// Running `target/debug/waiturl 'http://localhost:8080/'`
+// thread 'main' panicked at src/main.rs:93:7:
+// Error during request : reqwest::Error { kind: Request, url: "http://localhost:8080/", source: hyper_util::client::legacy::Error(Connect, ConnectError("tcp connect error", Os { code: 111, kind: ConnectionRefused, message: "Connection refused" })) }
+
 //TODO: Use stderr for printing errors
 
 //TODO: https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/second-edition/ch09-02-recoverable-errors-with-result.html
